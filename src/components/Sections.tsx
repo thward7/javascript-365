@@ -1,6 +1,6 @@
 const Sections = () => {
   return (
-    <div className='sections'>
+    <div className='sections max-lg:hidden'>
       <button>Code structure</button>
       <button>Coordinates</button>
       <button>Variables</button>

@@ -2,11 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @media (min-width: 1000px) {
+  .sections {
+    display: none;
+  }
+} */
+
 body {
   background-color: black;
   font-family: Verdana, sans-serif;
   max-width: 1600px;
-  color: white;
+  color: #e5e5e5;
   margin-left: auto;
   margin-right: auto;
 }
@@ -17,8 +23,7 @@ body {
   grid-auto-flow: column;
   grid-template-columns: repeat(9, minmax(0, 1fr));
   grid-template-rows: repeat(5, minmax(0, 1fr));
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0rem;
   font-size: 14px;
   border-bottom-width: 1px;
   border-color: #f4792e;
@@ -29,15 +34,12 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+    padding: 0.25rem 0.5rem;
     text-align: left;
-  }
 
-  button:hover {
-    text-decoration: underline;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -48,11 +50,11 @@ body {
     border-left-width: 1px;
     border-color: black;
     padding: 1.25rem;
-  }
 
-  button:hover {
-    border-color: #f4792e;
-    color: #ccc;
+    &:hover {
+      border-color: #f4792e;
+      color: #ccc;
+    }
   }
 }
 
@@ -63,7 +65,31 @@ body {
 }
 
 .gray-box {
-  padding: 0.75rem;
+  padding: 0rem 0.75rem;
   background-color: #222;
   border: 1px solid #3d3d3d;
+}
+
+.preview {
+  div {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.25rem;
+    font-size: 12px;
+  }
+}
+
+.preview-title {
+  color: #f90;
+  background-color: #222;
+  user-select: none;
+  padding: 0.25rem 0.5rem;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
