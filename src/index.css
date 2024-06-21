@@ -93,3 +93,31 @@ body {
     text-decoration: underline;
   }
 }
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  /* width: 91px; */
+  width: 100%;
+  text-align: center;
+  background-color: #333;
+  border-color: #3d3d3d;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  color: #f90;
+
+  button:hover {
+    text-decoration: underline;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
