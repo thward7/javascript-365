@@ -11,11 +11,9 @@ const Video = ({ data }: VideoProps) => {
         <img src={data.preview} className='size-full' />
         <div className='top-0'>{Math.floor(Math.random() * 100)}%</div>
         <div className='bottom-0'>
-          <div className='bottom-0'>
-            {Math.floor(Math.random() * 200000)
-              .toString()
-              .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
-          </div>
+          {Math.floor(Math.random() * 200000)
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
         </div>
         <div className='right-0 top-0 hover:bg-orange'>Like</div>
         <div className='bottom-0 right-0'>
